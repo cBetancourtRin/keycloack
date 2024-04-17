@@ -32,16 +32,17 @@
           style="
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
               sans-serif;
+            font-size: 1.5rem;
+            margin: 0;
           "
         >
-          Recuperar contraseña
+          ${msg("recoveryPassHead")}
         </p>
 
         <img
           style="
             width: 10rem;
-            margin-left: 50%;
-          "
+            margin-left: 50%;"
           src="./assets/score_logo.png"
           alt="Logo score"
         />
@@ -57,7 +58,7 @@
               sans-serif;
           "
         >
-          Hola,
+          ${msg("greetRecover")}
         </h2>
         <h2
           id="name-user"
@@ -76,9 +77,8 @@
             width: 60%;
           "
         >
-          Recibimos tu solicitud para restablecer contraseña en score, si
-          solicitaste el restablecimiento, lo puedes realizar en el siguiente
-          enlace:
+          ${msg("descRecover")}
+          
         </p>
 
         
@@ -101,7 +101,8 @@
               sans-serif;
           "
         >
-          Reestablecer contraseña
+          ${msg("restartPass")}
+          
         </button>
 
 
@@ -115,9 +116,8 @@
               sans-serif;
           "
         >
-          Si no solicitaste este restablecimiento o ves actividad sospechosa,
-          comunícate de manera inmediata a nuestro canal de soporte
-          soporte.innerconsulting.com
+          ${msg("alertRecovery")}
+          
         </p>
       </div>
     </section>
@@ -129,14 +129,11 @@
           sans-serif;
       "
     >
-      © 2024 SCORE. Todos los derechos reservados.
+      ${msg("copyrightText")}
     </p>
-
-    <h1>${msg("passwordResetBody",link, linkExpiration, realmName, linkExpirationFormatter(linkExpiration), user.username, user.email, user.firstName, user.lastName)}</h1>
   </body>
 </html>
 
 
-<#--   <h1>Reestablecer SCORE</h1>
-
-        ${msg("passwordResetBody",link, linkExpiration, realmName, linkExpirationFormatter(linkExpiration), user.username, user.email, user.firstName, user.lastName)}  -->
+<#-- Variables para extraer -->
+<#--  ${msg("passwordResetBody",link, linkExpiration, realmName, linkExpirationFormatter(linkExpiration), user.username, user.email, user.firstName, user.lastName)}  -->

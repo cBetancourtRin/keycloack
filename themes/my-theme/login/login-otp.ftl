@@ -2,69 +2,82 @@
 <@layout.registrationLayout displayMessage=!messagesPerField.existsError('totp'); section>
     <#if section="header">
         ${msg("doLogIn")}
-    <#elseif section="form">
+    <#elseif section = "title">
+        ${msg("totpHeaderTab")}  
+    
+    
+        <#elseif section="form">
 
-    <h1>Login-otp</h1>
 
+        <section id="login-otp-template">   
+        <img id="score-logo" src="${url.resourcesPath}/img/score_logo.png" alt="Score Logo" />
+        
+        <article id="description-login-otp">
+            <h1>Autenticación de dos pasos habilitada</h1>
+            <p>Escribe o pega el código temporal de 6 digitos generado en Google Authenticator</p>
 
-        <form id="kc-otp-login-form" class="${properties.kcFormClass!}" action="${url.loginAction}"
-            method="post">
-            <#if otpLogin.userOtpCredentials?size gt 1>
-            <h1>mapeo 1</h1>
-                <div class="${properties.kcFormGroupClass!}">
-                    <div class="${properties.kcInputWrapperClass!}">
-                    <#--  ciclo de dispositivos -->
+            <form id="form-qr-login" action="${url.loginAction}" method="post">
+
+                <#--  ciclo para verificar si alguna vez se autentico usuario -->
+                <#if otpLogin.userOtpCredentials?size gt 1>
+                    <#--  lista de dispositivos que ha registrado el usuario -->
+                    
+                    <div id="list-devices">
                         <#list otpLogin.userOtpCredentials as otpCredential>
-                            <input id="kc-otp-credential-${otpCredential?index}" class="${properties.kcLoginOTPListInputClass!}" type="radio" name="selectedCredentialId" value="${otpCredential.id}" <#if otpCredential.id == otpLogin.selectedCredentialId>checked="checked"</#if>>
-                            
-                            <label for="kc-otp-credential-${otpCredential?index}" class="${properties.kcLoginOTPListClass!}" tabindex="${otpCredential?index}">                                
-                                <span class="${properties.kcLoginOTPListItemHeaderClass!}">                                    
-                                    <span class="${properties.kcLoginOTPListItemIconBodyClass!}">
-                                      <i class="${properties.kcLoginOTPListItemIconClass!}" aria-hidden="true"></i>
-                                    </span>
-                                    <span class="${properties.kcLoginOTPListItemTitleClass!}">${otpCredential.userLabel}</span>
-                                </span>
-                            </label>
-                        </#list>
+                            <div id="item-device">
+                                <input 
+                                    type="radio" 
+                                    name="selectedCredentialId" 
+                                    value="${otpCredential.id}" 
+                                    <#if otpCredential.id == otpLogin.selectedCredentialId>checked="checked"</#if>>                     
+                                <label for="kc-otp-credential-${otpCredential?index}" tabindex="${otpCredential?index}"> 
+                                    ${otpCredential.userLabel}
+                                </label>
+                            </div>
+                        </#list>                   
                     </div>
-                </div>
-            </#if>
+                    
+                </#if>
 
-        <div class="${properties.kcFormGroupClass!}">
-            <h1>Aqui estoy</h1>
-            <div class="${properties.kcLabelWrapperClass!}">
-                <label for="otp" class="${properties.kcLabelClass!}"> <h1>mapeo 5</h1>${msg("loginOtpOneTime")}</label>
-            </div>
-
-            <div class="${properties.kcInputWrapperClass!}">
-                <h1>mapeo 6</h1>
-                <input id="otp" name="otp" autocomplete="off" type="text" class="${properties.kcInputClass!}"
-                       autofocus aria-invalid="<#if messagesPerField.existsError('totp')>true</#if>"/>
+                <div class="mb-3">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="exampleInputEmail1"
+                    aria-describedby="emailHelp"
+                    placeholder="Ejemplo 123456 (sin espacios ni símbolos adicionales)"
+                    name="otp" 
+                    autocomplete="off" 
+                    autofocus 
+                    aria-invalid="<#if messagesPerField.existsError('totp')>true</#if>"
+                  />
+                  <div id="code-help" class="form-text">
+                    Ingresa el código generado por la aplicación
+                  </div>
+                </div>  
 
                 <#if messagesPerField.existsError('totp')>
-                    <h1>mapeo 7</h1>
-                    <span id="input-error-otp-code" class="${properties.kcInputErrorMessageClass!}"
-                          aria-live="polite">
+                    <span id="input-error-otp-code" aria-live="polite">
                         ${kcSanitize(messagesPerField.get('totp'))?no_esc}
                     </span>
-                </#if>
-            </div>
-        </div>
+                </#if>             
+                
+                  <button type="submit" class="btn btn-primary" id="send-login-code">Enviar</button>
+              </form>
 
-            <div class="${properties.kcFormGroupClass!}">
-            <h1>mapeo 8</h1>
-                <div id="kc-form-options" class="${properties.kcFormOptionsClass!}">
-                    <div class="${properties.kcFormOptionsWrapperClass!}">
-                    </div>
-                </div>
+        </article>
 
-                <div id="kc-form-buttons" class="${properties.kcFormButtonsClass!}">
-                <h1>mapeo 9</h1>
-                    <input
-                        class="${properties.kcButtonClass!} ${properties.kcButtonPrimaryClass!} ${properties.kcButtonBlockClass!} ${properties.kcButtonLargeClass!}"
-                        name="login" id="kc-login" type="submit" value="${msg("doLogIn")}" />
-                </div>
-            </div>
-        </form>
+        <p id="copy-login-totp">© 2024 SCORE. Todos los derechos reservados.</p>
+
+        </section>
+
+
+
+
+
+
+
+
+
     </#if>
 </@layout.registrationLayout>
