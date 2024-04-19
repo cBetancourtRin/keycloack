@@ -73,8 +73,13 @@
                     <div class="mb-3">
                         <label for="password" class="form-label">${msg("labelPassword")}</label>
                         <div id="password-input">
+                            
                             <input name="password" id="password" type="password" class="form-control" placeholder="${msg("placeholerPassword")}" required>                        
-                            <label class="visibility" id="v" onclick="togglePassword()"><img id="vi" src="${url.resourcesPath}/img/eye-off.png"></label>
+                            
+                            <label class="visibility" id="v" onclick="togglePassword()">
+                                <img id="vi" src="${url.resourcesPath}/img/eye-off.png">
+                            </label>
+
                         </div>
                         <#--  if we use the recover password  -->
                         <#if realm.resetPasswordAllowed>

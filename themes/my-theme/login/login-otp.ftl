@@ -4,18 +4,13 @@
         ${msg("doLogIn")}
     <#elseif section = "title">
         ${msg("totpHeaderTab")}  
-    
-    
         <#elseif section="form">
-
-
         <section id="login-otp-template">   
         <img id="score-logo" src="${url.resourcesPath}/img/score_logo.png" alt="Score Logo" />
         
         <article id="description-login-otp">
-            <h1>Autenticación de dos pasos habilitada</h1>
-            <p>Escribe o pega el código temporal de 6 digitos generado en Google Authenticator</p>
-
+            <h1>${msg("twoFactorAuth")}</h1>
+            <p>${msg("descTwoFactorAuth")}</p>
             <form id="form-qr-login" action="${url.loginAction}" method="post">
 
                 <#--  ciclo para verificar si alguna vez se autentico usuario -->
@@ -52,7 +47,7 @@
                     aria-invalid="<#if messagesPerField.existsError('totp')>true</#if>"
                   />
                   <div id="code-help" class="form-text">
-                    Ingresa el código generado por la aplicación
+                    
                   </div>
                 </div>  
 
@@ -62,22 +57,16 @@
                     </span>
                 </#if>             
                 
-                  <button type="submit" class="btn btn-primary" id="send-login-code">Enviar</button>
+                  <button type="submit" class="btn btn-primary" id="send-login-code">
+                    ${msg("buttonSend")}
+                    </button>
               </form>
 
         </article>
 
-        <p id="copy-login-totp">© 2024 SCORE. Todos los derechos reservados.</p>
+        <p id="copy-login-totp">${msg("copyrightText")}</p>
 
         </section>
-
-
-
-
-
-
-
-
 
     </#if>
 </@layout.registrationLayout>

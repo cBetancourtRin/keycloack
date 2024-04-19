@@ -1,3 +1,4 @@
+<#--  error login notification  -->
 <#import "template.ftl" as layout>
 <@layout.emailLayout>
 
@@ -6,8 +7,8 @@
       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
   </head>
 
-  <body style="font-family: 'Poppins', sans-serif; ">
-    <section
+<body> 
+  <section
       id="container-email"
       style="
         border: 1px solid #bcbcbc;
@@ -33,7 +34,8 @@
               padding: 1.2rem 2.2rem;
               color: white;
               font-family: 'Poppins', sans-serif;            
-            ">
+            "
+      >
         <h2
           style="
                 font-family: 'Poppins', sans-serif;
@@ -43,13 +45,9 @@
                 color: white;
               "
         >
-          ${msg("recoveryPassHead")}
+          ${msg("loginErrHead")}
         </h2>
 
-        <#--  <img
-          src="${url.resourcesPath}/img/score_logo_blank.png"
-          alt="Logo score"
-        />  -->
       </div>
 
       <div
@@ -61,72 +59,40 @@
           style="
                 font-family: 'Poppins', sans-serif;
                 color: black;
-                font-size: 20px;
+                font-weight: 400;
+                font-size: 14px;
                 margin-bottom: 1rem;
               "
         >
-          ${msg("greetRecover")}
+          ${msg("loginErrAlert")}
         </h2>
-        <h2
-          id="name-user"
-          style="
-                color: #065AD8;
-                font-family: 'Poppins', sans-serif;
-                margin-bottom: 1rem;
-                font-size: 24px;
-              "
-        >
-          ${user.firstName } ${user.lastName}
-        </h2>
+
+        <div style="margin: auto; width: 20rem; font-family: 'Poppins', sans-serif; border:2px solid rgb(196, 196, 196);border-radius: 1rem; padding: 1rem;">      
+
+          <div style="display: flex; align-items: center; width: 18rem;">
+              <span style="font-weight: 600; color:#828282; margin-right: 1rem;">${msg("loginErrLabelDate")}</span>
+              <p style="font-weight: 300; margin: 0; color:#b7b7b7 ;">${kcSanitize(event.date)}</p>
+          </div>
+          <div style="display: flex; align-items: center; width: 20rem;">
+              <span style="font-weight: 600; color:#828282; margin-right: 1rem;">${msg("loginErrLabelIp")}</span>
+              <p style="font-weight: 300; margin: 0; color:#b7b7b7 ;"> ${kcSanitize(event.ipAddress)} </p>
+          </div>
+        </div>
+        
         <p
           style="
                 font-family: 'Poppins', sans-serif;
+                text-align: center;
                 width: 100%;
                 font-size: 14px;
-                color: #000000;
+                color: #646464;
+                margin-top: 2rem;
                 margin-bottom: 2rem;
               "
         >
-          ${msg("descRecover")}
+          ${msg("loginErrDesc")}
+          
         </p>
-
-        
-        <a href="${link}">
-          <button
-            id="button-restablish"
-            style="
-                background-color: #065AD8;
-                color: white;
-                font-weight: 600;
-                border-radius: 2rem;
-                width: 19rem;
-                font-size: 18px;
-                padding: 0.5rem;
-                margin-bottom: 2.5rem;
-                border: none;
-                cursor: pointer;
-                font-family: 'Poppins', sans-serif;
-              "
-          >
-            ${msg("restartPass")}
-          </button>
-        </a>
-        <p
-          style="
-            text-align: center;
-            color: #606060;
-            font-family: 'Poppins', sans-serif;
-            font-size: 14px;
-          "
-        >
-          ${msg("alertRecovery")} 
-          <span style="
-                  color: #6D6D6D;
-                  ">
-            ${msg("supportPage")}
-          </span>
-        </p>
-      </div>
     </section>
     <p
       style="
@@ -139,11 +105,7 @@
       ${msg("copyrightText")}
     </p>
 
-
-
   </body>
-
-  
 </@layout.emailLayout>
 
 

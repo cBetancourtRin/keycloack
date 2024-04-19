@@ -71,30 +71,162 @@
                     <#--  alert messages  -->
                     <#if displayMessage && message?has_content>                     
 
-                            <#--  <div class="alert alert-${message.type}">  -->                             
+                            <#--  <div class="alert alert-${message.type}">  -->                            
                                 
                         <#if message.type = 'success'>
-                        <div class="alert alert-success alert-dismissible fade show" role="alert">
-                            <span>${message.summary}</span>                                            
-                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>                                            
-                        </div> 
+                            <div class="alert fade show" role="alert">
+                                <div class="box-color" id="alert-box-type-${message.type}">
+                                    <svg
+                                    width="30"
+                                    height="30"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="2"
+                                    stroke="currentColor"
+                                    fill="none"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    style="color: white"
+                                    >
+                                    <path stroke="none" d="M0 0h24v24H0z" />
+                                    <circle cx="12" cy="12" r="9" />
+                                    <line x1="12" y1="8" x2="12" y2="12" />
+                                    <line x1="12" y1="16" x2="12.01" y2="16" />
+                                    </svg>
+                                </div>
+                                <div class="alert-content">                       
+                                    <div class="alert-message-container" id="alert-message-${message.type}">
+                                    <h3>${msg("headerSuccess")}</h3>
+                                    <p class="alert-message">
+                                        ${message.summary}
+                                    </p>
+                                    </div>
+                                    <button
+                                    id="btn-alert-close"
+                                    type="button"
+                                    class="btn-close"
+                                    data-bs-dismiss="alert"
+                                    aria-label="Close"
+                                    ></button>
+                                </div>
+                            </div>           
+
+
                         </#if>                                 
                         <#if message.type = 'warning'>
-                            <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                                <span>${message.summary}</span>                                            
-                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>                                            
-                            </div> 
+                            <div class="alert fade show" role="alert">
+                                <div class="box-color" id="alert-box-type-${message.type}">
+                                    <svg
+                                    width="30"
+                                    height="30"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="2"
+                                    stroke="currentColor"
+                                    fill="none"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    style="color: white"
+                                    >
+                                    <path stroke="none" d="M0 0h24v24H0z" />
+                                    <circle cx="12" cy="12" r="9" />
+                                    <line x1="12" y1="8" x2="12" y2="12" />
+                                    <line x1="12" y1="16" x2="12.01" y2="16" />
+                                    </svg>
+                                </div>
+                                <div class="alert-content">                       
+                                    <div class="alert-message-container" id="alert-message-${message.type}">
+                                    <h3>${msg("headerWarning")}</h3>
+                                    <p class="alert-message">
+                                        ${message.summary}
+                                    </p>
+                                    </div>
+                                    <button
+                                    id="btn-alert-close"
+                                    type="button"
+                                    class="btn-close"
+                                    data-bs-dismiss="alert"
+                                    aria-label="Close"
+                                    ></button>
+                                </div>
+                            </div>           
                         </#if>
+
                         <#if message.type = 'error'>
-                            <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                                <span>${message.summary}</span>                                            
-                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>                                            
-                            </div>
+                            <div class="alert fade show" role="alert">
+                                <div class="box-color" id="alert-box-type-${message.type}">
+                                    <svg
+                                    width="30"
+                                    height="30"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="2"
+                                    stroke="currentColor"
+                                    fill="none"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    style="color: white"
+                                    >
+                                    <path stroke="none" d="M0 0h24v24H0z" />
+                                    <circle cx="12" cy="12" r="9" />
+                                    <line x1="12" y1="8" x2="12" y2="12" />
+                                    <line x1="12" y1="16" x2="12.01" y2="16" />
+                                    </svg>
+                                </div>
+                                <div class="alert-content">                       
+                                    <div class="alert-message-container" id="alert-message-${message.type}">
+                                    <h3>${msg("headerError")}</h3>
+                                    <p class="alert-message">
+                                        ${message.summary}
+                                    </p>
+                                    </div>
+                                    <button
+                                    id="btn-alert-close"
+                                    type="button"
+                                    class="btn-close"
+                                    data-bs-dismiss="alert"
+                                    aria-label="Close"
+                                    ></button>
+                                </div>
+                            </div>                           
                         </#if>
                         <#if message.type = 'info'>
-                            <div class="alert alert-info alert-dismissible fade show" role="alert">
-                                <span>${message.summary}</span>                                            
-                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>                                            
+                            <div class="alert fade show" role="alert">
+                                <div class="box-color" id="alert-box-type-${message.type}">
+                                    <svg
+                                    width="30"
+                                    height="30"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="2"
+                                    stroke="currentColor"
+                                    fill="none"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    style="color: white"
+                                    >
+                                    <path stroke="none" d="M0 0h24v24H0z" />
+                                    <circle cx="12" cy="12" r="9" />
+                                    <line x1="12" y1="8" x2="12" y2="12" />
+                                    <line x1="12" y1="16" x2="12.01" y2="16" />
+                                    </svg>
+                                </div>
+                                
+                                <div class="alert-content">                     
+                                    
+                                    <div class="alert-message-container">
+                                    
+                                    <h3>${msg("headerInfo")}</h3>
+                                    <p class="alert-message">
+                                        ${message.summary}
+                                    </p>
+                                    </div>
+                                    <button
+                                    id="btn-alert-close"
+                                    type="button"
+                                    class="btn-close"
+                                    data-bs-dismiss="alert"
+                                    aria-label="Close"
+                                    ></button>
+                                </div>
+
+
                             </div>
                         </#if> 
                     </#if>
