@@ -1,0 +1,52 @@
+
+
+
+#verifyEmail {
+  display: flex;
+  flex-direction: column;
+  padding: 8rem 1rem 0 1rem;
+  text-align: center;
+  align-items: center;
+  gap: 1rem;
+  height: auto;
+}
+
+.container-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  gap: 1rem;
+  flex: 1;
+}
+
+#score-logo {
+  width: 15rem;
+  position: absolute;
+  top: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+#copy-text {
+  color: #b2b2b2;
+  position: absolute;
+  bottom: 1rem; /* Ajusta la posición del texto al fondo */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  }
+
+@media screen and (min-width: 768px) {
+
+  #score-logo {
+    width: 12rem;
+    top: 1.5rem;
+    left: 1rem;
+    transform: translateX(0%);
+  }
+
+  .descr {
+    width: 650px;
+  }
+}

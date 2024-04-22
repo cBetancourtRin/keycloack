@@ -1,134 +1,3 @@
-/* IMPORT THE REAL DESIGN SYSTEM FOR FONTS AND COLORS
-.container-login-page {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-  margin: 3rem 0;
-}
-.box-container-form {
-  background-color: white;
-  border-radius: 1rem;
-  padding: 2rem;
-  width: 80%;
-  min-width: 20rem;
-  max-width: 22rem;
-  min-height: 28rem;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 5px 14px 31px -8px rgba(148, 148, 148, 1);
-  justify-content: space-around;
-}
-.box-container-form > .main-title {
-  color: rgb(192, 192, 192);
-}
-.main-title {
-  margin: 0;
-}
-.main-title > strong,
-.score-info > h1 {
-  color: #f5a220;
-}
-.box-container-form > h2 {
-  font-weight: lighter;
-  font-size: xx-large;
-}
-.score-fav-logo {
-  width: 0.5rem;
-}
-.btn-primary {
-  width: 100%;
-}
-.btn-qr {
-  margin: 0.5rem 0;
-}
-.btn-qr:hover {
-  color: white;
-}
-.btn-qr:hover .qr-image {
-  filter: brightness(0) invert(1);
-}
-.qr-image {
-  width: 1rem;
-  height: 1rem;
-}
-#form-divider {
-  margin: 1rem 0;
-}
-.form-label {
-  font-size: small;
-  margin: 0;
-}
-.form-control::placeholder {
-  color: rgb(205, 204, 204);
-  font-size: small;
-}
-#password-input {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-}
-#box-login-fgt {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  margin-top: 2.5rem;
-}
-.btn-fgt {
-  font-size: 0.8rem;
-  width: 100%;
-  text-align: right;
-  padding-right: 0;
-}
-.copyright {
-  color: rgb(205, 204, 204);
-  font-size: small;
-  text-align: center;
-}
-.score-info {
-  display: flex;
-}
-.score-info > h1,
-.score-info > p {
-  display: none;
-}
-.score-info > .score-intro-logo {
-  width: 15rem;
-}
-
-@media screen and (min-width: 768px) {
-  .container-login-page {
-    flex-direction: row;
-    padding: 2rem;
-    gap: 5rem;
-    height: 90vh;
-  }
-  .score-info {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    max-width: 30rem;
-    margin-left: 3rem;
-  }
-  .score-info > h1,
-  .score-info > p {
-    display: block;
-  }
-  .score-info > h1 {
-    margin-top: 2rem;
-  }
-  .score-info > .score-intro-logo {
-    width: 20rem;
-  }
-  /* .copyright {
-    position: absolute;
-    bottom: 1rem;
-    right: 1rem;
-  } */
-
 /* Estilos del contenedor del formulario y logo */
 .container-login {
   display: flex;
@@ -237,7 +106,7 @@
   }
 
   /* Estilos del contenedor del formulario y logo */
-  div.container-login {
+  article.container-login {
     gap: 60px;
     width: 440px;
     place-self: center;
@@ -266,7 +135,7 @@
 @media (min-width: 1200px) {
 
   .container-fluid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 0.8fr 1fr;
   }
 
   .container-login {

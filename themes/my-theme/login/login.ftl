@@ -11,7 +11,7 @@
               <#elseif section="form">
                 <#if realm.password>
                   <section class="container-fluid">
-                    <div class="carousel-container">
+                    <article class="carousel-container">
                       <div id="carouselServices" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-indicators d-flex gap-4">
                           <button type="button" data-bs-target="#carouselServices" data-bs-slide-to="0" class="btnCarousel active"
@@ -48,8 +48,8 @@
                           </div>
                         </div>
                       </div>
-                    </div>
-                    <div class="container-login">
+                    </article>
+                    <article class="container-login">
                       <div class="logo-descr">
                         <img class="logo-img" src="${url.resourcesPath}/img/score_logo2.png" alt="">
                         <span class="line-logo"></span>
@@ -78,7 +78,7 @@
                           <div class="input-group">
                             <span class="input-group-text bg-transparent" id="basic-addon1"><img height="15px"
                                 src="${url.resourcesPath}/img/email-icon.svg" alt=""></span>
-                            <input type="text" class="form-control input-form border border-start-0"
+                            <input type="email" class="form-control input-form border border-start-0"
                               placeholder="${msg("placeholderMail")}"
                               name="username"
                               id="user-email" aria-describedby="emailHelp"
@@ -103,8 +103,8 @@
                           </button>
                         </form>
                       </div>
-                    </div>
-                  </div>
+                    </article>
+                  </section>
                   <#-- if we use qr authentication -->
                     <#-- <button type="button" class="btn btn-outline-warning btn-qr" disabled>
                       <img class="qr-image" src="${url.resourcesPath}/img/qr-logo.png" alt="Qr image" />

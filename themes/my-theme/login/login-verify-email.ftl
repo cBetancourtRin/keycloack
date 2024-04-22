@@ -1,17 +1,33 @@
 <#import "template.ftl" as layout>
-<@layout.registrationLayout displayInfo=true; section>
-    <#if section = "header">
-        ${msg("emailVerifyTitle")}
-    <#elseif section = "form">
-    <h1>Login-verify-email</h1>
-        <p class="instruction">${msg("emailVerifyInstruction1",user.email)}</p> 
-    <#elseif section = "info">
-        <p class="instruction">
-            ${msg("emailVerifyInstruction2")}
-            <br/>
-            <a href="${url.loginAction}">${msg("doClickHere")}</a> 
-            
-            ${msg("emailVerifyInstruction3")}
-        </p>
+  <@layout.registrationLayout displayInfo=true; section>
+    <#if section="title">
+      ${msg("headerEmailVerifyTab")}
+      <#elseif section="header">
+        <#elseif section="form">
+          <section id="verifyEmail" class="container-fluid">
+            <img id="score-logo" src="${url.resourcesPath}/img/score_logo.png" alt="Logo score" />
+            <article class="container-info">
+              <h1>
+                ${msg("emailVerifyTitle")}
+              </h1>
+              <p class="descr">
+                ${msg("emailVerifyInstruction1")}
+                <span class="fw-bold">
+                  ${msg(user.email)}
+                </span>
+              </p>
+              <p>
+                ${msg("emailVerifyInstruction2")}
+                <br />
+                ${msg("emailVerifyInstruction3")}
+                <a href="${url.loginAction}">
+                  ${msg("doClickHere")}
+                </a>
+              </p>
+              <p id="copy-text">
+                ${msg("copyrightText")}
+              </p>
+            </article>
+          </section>
     </#if>
-</@layout.registrationLayout>
+  </@layout.registrationLayout>
