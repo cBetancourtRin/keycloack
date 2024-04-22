@@ -129,75 +129,50 @@
     right: 1rem;
   } */
 
-.container-right-content {
-  height: 100%;
+/* Estilos del contenedor del formulario y logo */
+.container-login {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 60px;
 }
 
-.text-logo {
-  font-size: 20px;
-  color: #616161;
-  margin: 0%;
-  padding: 0%;
-  font-weight: 600;
-  text-align: center;
-  padding-left: 25px;
+/* Estilos del logo y descripcion */
+
+.logo-img {
+  height: 90px;
+}
+
+.logo-descr {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
-.img-logo {
-  height: 75px;
-  padding-right: 25px;
+.logo-descr h6 {
+  font-size: 17px;
+  font-weight: 600;
+  color: #616161;
+  text-align: center;
 }
 
-.logo-text {
-  height: 99px;
-}
-
-.line {
-  border-right: 2px solid #D9D9D9;
-  height: 76px;
-}
-
-.container-right {
-  height: 100vh;
-  margin-left: -3px;
-}
-
-.input-form {
-  height: 43px;
-  font-size: 16px;
-}
-
-.header-form-body {
-  font-size: 14px;
-  color: #B2B2B2;
-}
-
-.header-form-title {
+.form-title {
   color: #606060;
 }
 
-.header-form {
-  margin-bottom: 45px;
-}
-
-.input-group {
-  margin-bottom: 30px;
-}
-
-.link-form {
-  margin-bottom: 60px;
+.form-descr {
+  color: #B2B2B2;
   font-size: 14px;
 }
 
-
-
-.form-container {
-  margin-top: 50px;
+.form-login {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   width: 100%;
 }
 
@@ -205,13 +180,38 @@
   display: none;
 }
 
-@media (min-width: 992px) {
-  .carousel-container {
-    display: block;
+@media (min-width: 768px) {
+  .logo-descr {
+    width: 300px;
   }
 
-  /* Estilos para el carrusel */
-  .carousel-indicators button.btnCarousel.active {
+}
+
+@media (min-width: 992px) {
+
+  .container-fluid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0px;
+    padding-left: 0;
+  }
+
+
+  /* Estilos del contenedor del carousel */
+  .carousel-container {
+    display: block;
+    height: 100vh;
+  }
+
+  .btnCarousel {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #D9D9D9;
+    border: none;
+  }
+
+  #carouselServices button.btnCarousel.active {
     background-color: #0089ED;
     border-radius: 2rem;
     border: 0px none transparent;
@@ -219,52 +219,62 @@
     width: 13px;
   }
 
-  .carousel-indicators button.btnCarousel {
+  #carouselServices button.btnCarousel {
     border-radius: 2rem;
     border: 2px solid #D2D2D2;
     height: 13px;
     width: 13px;
   }
 
-  #carouselProdcuts {
+  .carousel-inner .carousel-item img {
     height: 100vh;
-  }
-
-  .carousel-inner {
-    height: 100vh;
+    object-fit: fill;
+    width: 100%;
   }
 
   .carousel-inner .carousel-item {
     height: 100vh;
   }
 
-  .carousel-inner .carousel-item img {
-    height: 100vh;
-    object-fit: fill;
+  /* Estilos del contenedor del formulario y logo */
+  div.container-login {
+    gap: 60px;
+    width: 440px;
+    place-self: center;
+  }
+
+  .logo-descr {
+    flex-direction: row;
     width: 100%;
-    mask-image: linear-gradient(to right, black 90%, transparent);
   }
 
-  /* Estilos para el formulario de inicio de sesión */
+  .logo-img {
+    height: 70px;
+    margin-right: 13px;
+  }
 
-  .container-right {
-    height: 100vh;
-    width: 400px;
+  .line-logo {
+    border-right: 2px solid #D9D9D9;
+    height: 76px;
+  }
+
+  .container-form {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1200px) {
+
+  .container-fluid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .container-login {
+    width: 550px;
+  }
+
+  .logo-descr {
+    width: 100%;
   }
 
 }
-
-@media (min-height: 750px) {
-  .form-container {
-    margin-top: 110px;
-  }
-}
-
-/* @media (min-width: 1200px) {
-  .container-right-content {
-  height: 100%;
-  margin: 0 auto;
-  width: 550px;
-}
-} */
-
