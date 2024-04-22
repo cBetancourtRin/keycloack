@@ -4,10 +4,7 @@
         ${msg("updatePasswordTitle")?no_esc}
     <#elseif section = "header">
         ${msg("updatePasswordTitle")?no_esc}
-    <#elseif section = "form">
-
-
-    
+    <#elseif section = "form">   
 
       <div class="box-container-forgot">
           <picture id="logo-forgot">

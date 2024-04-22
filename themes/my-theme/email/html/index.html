@@ -1,140 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="stylesheet" href="./alert-prueba.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
     />
   </head>
 
-  <body style="font-family: 'Poppins', sans-serif">
-    <section
-      id="container-email"
-      style="
-        border: 1px solid #bcbcbc;
-        border-radius: 0.5rem;
-        width: 90%;
-        margin: 1rem auto;
-        max-width: 40rem;
-        min-width: 35rem;
-      "
-    >
-      <div
-        id="header-email"
-        style="
-          background-color: #065ad8;
-          display: flex;
-          margin-left: -0.3rem;
-          margin-right: -0.3rem;
-          margin-top: -0.1rem;
-          justify-content: space-between;
-          border-top-right-radius: 0.5rem;
-          border-top-left-radius: 0.5rem;
-          border-bottom-right-radius: 4rem;
-          align-items: center;
-          padding: 1.2rem 2.2rem;
-          color: white;
-        "
-      >
-        <h2
-          style="font-size: 24px; margin: 0; white-space: nowrap; color: white"
-        >
-          Verificación de email
-        </h2>
-
+  <body>
+    <section id="terms-conditions">
+      
+      <picture id="logo-forgot-cond">
         <img
-          src="${url.resourcesPath}/img/score_logo_blank.png"
-          alt="Logo score"
+          id="logo-forgot-cond-img"
+          src="./assets/score_logo.png"
+          alt="logo forgot password"
         />
-      </div>
+      </picture>
 
-      <div
-        id="info-recover"
-        style="margin-left: 2.5rem; margin-top: 2rem; margin-right: 3rem"
-      >
-        <h2
-          style="
-            font-weight: 400;
-            color: black;
-            font-size: 20px;
-            margin-bottom: 1rem;
-          "
-        >
-          Hola,
-        </h2>
-        <h2
-          id="name-user"
-          style="
-            color: #065ad8;
+      <h2>Términos y condiciones</h2>
 
-            margin-bottom: 1rem;
-            font-size: 24px;
-          "
-        >
-          c.camilo.b.rincon@hotmail.com
-        </h2>
+      <article id="terms-container">
+        <div id="terms-text">
+          <div>
+            <span>Términos y Condiciones de Uso de la Plataforma SCORE</span>
+            <br />
+            <br />
+            Bienvenido a la plataforma SCORE, especializada en servicios
+            tecnológicos IoT e infraestructura en la nube. Antes de utilizar
+            nuestros servicios, te pedimos que leas detenidamente estos términos
+            y condiciones. Al acceder y utilizar nuestra plataforma, aceptas
+            estar legalmente vinculado por estos términos. Si no estás de
+            acuerdo con alguno de los términos, te recomendamos que no utilices
+            nuestros servicios.
+            <br />
+            <br/>
+            <span>Definiciones</span>
+            <br />
+            <br/>
+            1.1. Plataforma: se refiere a la plataforma en línea SCORE que
+            ofrece servicios tecnológicos IoT e infraestructura en la nube.
+            <br />
+            <br/>
+            1.2. Usuario: cualquier persona que acceda y utilice la plataforma
+            SCORE.
+            <br />
+            <br/>
+            1.3. Servicios: los servicios tecnológicos IoT e infraestructura en
+            la nube ofrecidos en la plataforma SCORE.
+            <br />
+            <br/>
+            1.4. Datos del Usuario: cualquier información proporcionada por el
+            Usuario a través de la plataforma SCORE.
+            <br />
+            <br/>
+            <span>Uso de la Plataforma</span>
+            <br />
+            <br/>
+            2.1. Al utilizar la plataforma SCORE, el Usuario acepta cumplir con
+            estos términos y condiciones.
+            <br />
+            <br/>
+            2.2. El Usuario es responsable de mantener la confidencialidad de
+            sus credenciales de acceso y de todas las actividades que ocurran
+            bajo su cuenta en la plataforma SCORE.
+            <br />
+            <br/>
+            2.3. El Usuario no debe utilizar la plataforma SCORE de manera
+            fraudulenta, para actividades ilegales o que infrinjan los derechos
+            de terceros.
+            <br />
+            <br/>
+            <span>Privacidad</span>
+            <br />
+            <br/>
+            3.1. Nos comprometemos a proteger la privacidad de los Datos del
+            Usuario de acuerdo con nuestra política de privacidad, la cual
+            puedes consultar en la plataforma SCORE.
+            <br />
+            <br/>
+            3.2. El Usuario entiende y acepta que cierta información (como datos
+            de uso) puede ser recopilada y utilizada de forma anónima para
+            mejorar nuestros servicios en la plataforma SCORE.
+            <br />
+            <br/>
+            <span>Modificaciones</span>
+            <br />
+            <br/>
+            6.1. Nos reservamos el derecho de modificar estos términos y
+            condiciones en cualquier momento. Las modificaciones entrarán en
+            vigencia a partir de su publicación en la plataforma SCORE.
+            <br />
+            <br/>
+            6.2. Es responsabilidad del Usuario revisar periódicamente estos
+            términos y condiciones en la plataforma SCORE para estar al tanto de
+            cualquier cambio.
+            <br />
+            <br/>
+            <span>Ley Aplicable</span>
+            <br />
+            <br/>
+            7.1. Estos términos y condiciones se rigen por las leyes de la
+            República de Colombia.
+            <br />
+            <br/>
+            7.2. Cualquier disputa relacionada con estos términos y condiciones
+            se resolverá mediante arbitraje de acuerdo con las leyes
+            colombianas.
+            <br />
+            <br/>
+            Al utilizar nuestros servicios en la plataforma SCORE, el Usuario
+            reconoce haber leído, entendido y aceptado estos términos y
+            condiciones en su totalidad. Si tienes alguna pregunta o inquietud,
+            no dudes en contactarnos.
+            <br />
+            <br/>
+            Última actualización: 01 enero 2023
+          </div>
+        </div>
+      </article>
 
-        <p
-          style="
-            width: 100%;
-            font-size: 14px;
-            color: #828282;
-            margin-bottom: 2rem;
-          "
-        >
-          Alguien ha asignado una cuenta con esta dirección de correo
-          electrónico. Si fuiste tu, has click en el siguiente enlace para
-          activar la cuenta
-        </p>
-
-        <a href="${link}">
-          <button
-            id="button-restablish"
-            style="
-              background-color: #065ad8;
-              color: white;
-              font-weight: 600;
-              border-radius: 2rem;
-              width: 15rem;
-              font-size: 18px;
-              padding: 0.5rem;
-              margin-bottom: 1rem;
-              border: none;
-              cursor: pointer;
-            "
+      <div class="alert fade show d-none" id="alert-container" role="alert">
+        <div class="box-color" id="alert-box-type-${message.type}">
+          <svg
+            width="30"
+            height="30"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            style="color: white"
           >
-            Confirmar Email
-          </button>
-        </a>
-        <p
-          style="
-            width: 100%;
-            font-size: 14px;
-            color: #828282;
-            margin-bottom: 2rem;
-          "
-        >
-          Enlace válido por los próximos 5 minutos*
-        </p>
-        <p
-          style="
-            text-align: center;
-            color: #606060;
-            font-size: 14px;
-            text-align: justify;
-          "
-        >
-          Si tienes dudas o inconvenientes con la activación de tu cuenta puedes
-          acceder a nuestro panel de soporte en
-          <span style="color: #6d6d6d; font-weight: 600; text-decoration: none">
-            soporte.innerconsulting.com
-          </span>
-        </p>
+            <path stroke="none" d="M0 0h24v24H0z" />
+            <circle cx="12" cy="12" r="9" />
+            <line x1="12" y1="8" x2="12" y2="12" />
+            <line x1="12" y1="16" x2="12.01" y2="16" />
+          </svg>
+        </div>
+        <div class="alert-content">
+          <div
+            class="alert-message-container"
+            id="alert-message-${message.type}"
+          >
+            <h3>Debes aceptar terminos</h3>
+            <p class="alert-message">No podrás acceder al aplicativo</p>
+          </div>
+          <button
+            id="btn-alert-close"
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="alert"
+            aria-label="Close"
+          ></button>
+        </div>
       </div>
+
+      <form action="" id="form-accept-terms">
+        <div id="box-input-terms">
+          <input
+            type="checkbox"
+            id="accept-terms"
+            name="accept-terms"
+            required
+          />
+          <label for="accept-terms"
+            >Estoy de acuerdo con los términos y condiciones</label
+          >
+        </div>
+
+        <div id="box-buttons-terms">
+          <button class="btn btn-primary" id="submit-btn" disabled>
+            Aceptar
+          </button>
+          <button class="btn btn-secondary" id="decline-btn" onclick="">
+            Declinar
+          </button>
+        </div>
+      </form>
+
+      <p id="copy-text">${msg("copyrightText")}</p>
     </section>
-    <p style="text-align: center; color: #b2b2b2; font-size: 16px">
-      © 2024 SCORE. Todos los derechos reservados.
-    </p>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      const alertContainer = document.getElementById("alert-container");
+      const declineButton = document.getElementById("decline-btn");
+      declineButton.addEventListener("click", function (e) {
+        e.preventDefault();
+        alertContainer.classList.remove("d-none");
+        declineButton.disabled = true;
+      });
+
+      const submitButton = document.getElementById("submit-btn");
+      const articleContainer = document.getElementById("terms-text");
+
+      articleContainer.addEventListener("scroll", function () {
+        if (
+          articleContainer.scrollHeight - articleContainer.scrollTop ===
+          articleContainer.clientHeight
+        ) {
+          submitButton.disabled = false;
+        }
+      });
+    </script>
   </body>
 </html>

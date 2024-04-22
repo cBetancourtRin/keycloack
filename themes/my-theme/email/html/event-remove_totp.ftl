@@ -1,7 +1,7 @@
 <#--  Cuando eliminamos un dispositivo de OTP 2f  -->
 <#--  Plntilla que no se encuentra operando acutalmente  -->
 
-<h1>REMOVING OTP 2f</h1>
+<h1>event-remove-totp</h1>
 
 <#import "template.ftl" as layout>
     <@layout.emailLayout>

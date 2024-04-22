@@ -2,16 +2,211 @@
 <@layout.registrationLayout displayMessage=false; section>
     <#if section = "header">
         ${msg("termsTitle")}
+        terminos y condiciones
     <#elseif section = "form">
 
-    <h1>Terminos y condiciones</h1>
-    <div id="kc-terms-text">
-        ${kcSanitize(msg("termsText"))?no_esc}
-    </div>
-    <form class="form-actions" action="${url.loginAction}" method="POST">
+
+      <section id="terms-conditions">
+        <picture id="logo-forgot-cond">
+          <img
+            id="logo-forgot-cond-img"
+            src="${url.resourcesPath}/img/score_logo.png"
+            alt="logo forgot password"
+          />
+        </picture>
+
+      <h2>Términos y condiciones</h2>
+
+      <article id="terms-container">
+        <div id="terms-text">
+          <div>
+            <span>Términos y Condiciones de Uso de la Plataforma SCORE</span>
+            <br />
+            <br />
+            Bienvenido a la plataforma SCORE, especializada en servicios
+            tecnológicos IoT e infraestructura en la nube. Antes de utilizar
+            nuestros servicios, te pedimos que leas detenidamente estos términos
+            y condiciones. Al acceder y utilizar nuestra plataforma, aceptas
+            estar legalmente vinculado por estos términos. Si no estás de
+            acuerdo con alguno de los términos, te recomendamos que no utilices
+            nuestros servicios.
+            <br />
+            <br/>
+            <span>Definiciones</span>
+            <br />
+            <br/>
+            1.1. Plataforma: se refiere a la plataforma en línea SCORE que
+            ofrece servicios tecnológicos IoT e infraestructura en la nube.
+            <br />
+            <br/>
+            1.2. Usuario: cualquier persona que acceda y utilice la plataforma
+            SCORE.
+            <br />
+            <br/>
+            1.3. Servicios: los servicios tecnológicos IoT e infraestructura en
+            la nube ofrecidos en la plataforma SCORE.
+            <br />
+            <br/>
+            1.4. Datos del Usuario: cualquier información proporcionada por el
+            Usuario a través de la plataforma SCORE.
+            <br />
+            <br/>
+            <span>Uso de la Plataforma</span>
+            <br />
+            <br/>
+            2.1. Al utilizar la plataforma SCORE, el Usuario acepta cumplir con
+            estos términos y condiciones.
+            <br />
+            <br/>
+            2.2. El Usuario es responsable de mantener la confidencialidad de
+            sus credenciales de acceso y de todas las actividades que ocurran
+            bajo su cuenta en la plataforma SCORE.
+            <br />
+            <br/>
+            2.3. El Usuario no debe utilizar la plataforma SCORE de manera
+            fraudulenta, para actividades ilegales o que infrinjan los derechos
+            de terceros.
+            <br />
+            <br/>
+            <span>Privacidad</span>
+            <br />
+            <br/>
+            3.1. Nos comprometemos a proteger la privacidad de los Datos del
+            Usuario de acuerdo con nuestra política de privacidad, la cual
+            puedes consultar en la plataforma SCORE.
+            <br />
+            <br/>
+            3.2. El Usuario entiende y acepta que cierta información (como datos
+            de uso) puede ser recopilada y utilizada de forma anónima para
+            mejorar nuestros servicios en la plataforma SCORE.
+            <br />
+            <br/>
+            <span>Modificaciones</span>
+            <br />
+            <br/>
+            6.1. Nos reservamos el derecho de modificar estos términos y
+            condiciones en cualquier momento. Las modificaciones entrarán en
+            vigencia a partir de su publicación en la plataforma SCORE.
+            <br />
+            <br/>
+            6.2. Es responsabilidad del Usuario revisar periódicamente estos
+            términos y condiciones en la plataforma SCORE para estar al tanto de
+            cualquier cambio.
+            <br />
+            <br/>
+            <span>Ley Aplicable</span>
+            <br />
+            <br/>
+            7.1. Estos términos y condiciones se rigen por las leyes de la
+            República de Colombia.
+            <br />
+            <br/>
+            7.2. Cualquier disputa relacionada con estos términos y condiciones
+            se resolverá mediante arbitraje de acuerdo con las leyes
+            colombianas.
+            <br />
+            <br/>
+            Al utilizar nuestros servicios en la plataforma SCORE, el Usuario
+            reconoce haber leído, entendido y aceptado estos términos y
+            condiciones en su totalidad. Si tienes alguna pregunta o inquietud,
+            no dudes en contactarnos.
+            <br />
+            <br/>
+            Última actualización: 01 enero 2023
+          </div>
+        </div>
+      </article>
+
+      <div class="alert fade show d-none" id="alert-container" role="alert">
+        <div class="box-color" id="alert-box-type-error">
+          <svg
+            width="30"
+            height="30"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            style="color: white"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" />
+            <circle cx="12" cy="12" r="9" />
+            <line x1="12" y1="8" x2="12" y2="12" />
+            <line x1="12" y1="16" x2="12.01" y2="16" />
+          </svg>
+        </div>
+        <div class="alert-content">
+          <div
+            class="alert-message-container"
+            id="alert-message-error"
+          >
+            <h3>Debes aceptar terminos</h3>
+            <p class="alert-message">No podrás acceder al aplicativo</p>
+          </div>
+          <button
+            id="btn-alert-close"
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="alert"
+            aria-label="Close"
+          ></button>
+        </div>
+      </div>
+
+      <form action="${url.loginAction}" method="POST" id="form-accept-terms">
+        <div id="box-input-terms">
+          <input
+            type="checkbox"
+            id="accept-terms"
+            name="accept-terms"
+            required
+          />
+          <label for="accept-terms"
+            >Estoy de acuerdo con los términos y condiciones</label
+          >
+        </div>
+
+        <div>
+          <button class="btn btn-primary" id="submit-btn" name="accept" type="submit" disabled>
+            Aceptar
+          </button>
+          <button class="btn btn-secondary" id="decline-btn" onclick="">
+            Declinar
+          </button>
+        </div>
+      </form>
+
+      <p id="copy-text">${msg("copyrightText")}</p>
+    </section>
+
+    <script>
+      const alertContainer = document.getElementById("alert-container");
+      const declineButton = document.getElementById("decline-btn");
+      declineButton.addEventListener("click", function (e) {
+        e.preventDefault();
+        alertContainer.classList.remove("d-none");
+        declineButton.disabled = true;
+      });
+
+      const submitButton = document.getElementById("submit-btn");
+      const articleContainer = document.getElementById("terms-text");
+
+      articleContainer.addEventListener("scroll", function () {
+        if (
+          articleContainer.scrollHeight - articleContainer.scrollTop ===
+          articleContainer.clientHeight
+        ) {
+          submitButton.disabled = false;
+        }
+      });
+    </script>
+
+
+   <#--   <form class="form-actions" action="${url.loginAction}" method="POST">        
         <input class="${properties.kcButtonClass!} ${properties.kcButtonPrimaryClass!} ${properties.kcButtonLargeClass!}" name="accept" id="kc-accept" type="submit" value="${msg("doAccept")}"/>
         <input class="${properties.kcButtonClass!} ${properties.kcButtonDefaultClass!} ${properties.kcButtonLargeClass!}" name="cancel" id="kc-decline" type="submit" value="${msg("doDecline")}"/>
-    </form>
-    <div class="clearfix"></div>
+    </form>  -->
+
     </#if>
 </@layout.registrationLayout>

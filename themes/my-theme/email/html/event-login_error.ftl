@@ -47,7 +47,6 @@
             id="info-recover"
             style="margin-left: 2.5rem; margin-top: 2rem; margin-right: 3rem"
           >
-
             <h2
               style="
                     font-family: 'Poppins', sans-serif;
@@ -60,7 +59,7 @@
               ${msg("loginErrAlert")}
             </h2>
 
-            <div style="margin: auto; width: 20rem; font-family: 'Poppins', sans-serif; border:2px solid rgb(196, 196, 196);border-radius: 1rem; padding: 1rem;">      
+            <div style="width: 20rem; font-family: 'Poppins', sans-serif; border:2px solid rgb(196, 196, 196);border-radius: 1rem; padding: 1rem;">      
 
               <div style="display: flex; align-items: center; width: 18rem;">
                   <span style="font-weight: 600; color:#828282; margin-right: 1rem;">${msg("loginErrLabelDate")}</span>

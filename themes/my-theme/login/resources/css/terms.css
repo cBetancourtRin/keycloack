@@ -12,13 +12,13 @@
   --secondary-font-color: #b2b2b2;
 }
 /* generate a base css */
-#logo-forgot {
+#terms-conditions > #logo-forgot-cond {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 2rem 0;
 }
-#logo-forgot-img {
+#logo-forgot-cond-img {
   width: 15rem;
 }
 
@@ -78,30 +78,21 @@
 #form-accept-terms label {
   color: var(--primary-font-color);
 }
-#box-buttons-terms{
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
 
-@media screen and (min-width: 578px) {
-  #logo-forgot {
+@media screen and (min-width: 678px) {
+  #terms-conditions > #logo-forgot-cond {
     position: absolute;
     top: 1rem;
     left: 1rem;
   }
 
-  #terms-conditions{
-    margin-top: 5rem;
-  }
-
-  #logo-forgot-img {
+  #logo-forgot-cond-img {
     width: 10rem;
   }
 
-  #terms-conditions {
+  #terms-conditions{
+    margin: 8rem auto 0 auto;
     max-width: 70rem;
-    margin: 10rem auto;
   }
 
   #terms-container > p {
@@ -109,17 +100,4 @@
     overflow-y: scroll;
     padding: 1rem;
   }
-
-  #box-buttons-terms{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-  }
-  #box-buttons-terms > button{
-    width: 100%;
-  }
-
-
 }
