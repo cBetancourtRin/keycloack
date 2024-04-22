@@ -76,7 +76,7 @@
                 font-size: 24px;
               "
         >
-          ${user.firstName } ${user.lastName}
+          ${user.firstName} ${user.lastName}
         </h2>
         <p
           style="
@@ -102,7 +102,7 @@
                 width: 19rem;
                 font-size: 18px;
                 padding: 0.5rem;
-                margin-bottom: 2.5rem;
+                margin-bottom: 1rem;
                 border: none;
                 cursor: pointer;
                 font-family: 'Poppins', sans-serif;
@@ -111,6 +111,17 @@
             ${msg("restartPass")}
           </button>
         </a>
+        <p
+          style="
+            width: 100%;
+            font-size: 14px;
+            color: #828282;
+            margin-bottom: 2rem;
+          "
+        >
+        ${msg("timeLink")}
+          
+        </p>
         <p
           style="
             text-align: center;

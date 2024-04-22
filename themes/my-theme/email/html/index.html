@@ -1,161 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
-</head>
-
-<body style="font-family: 'Poppins', sans-serif; ">
-  
-
-  <section
-        id="container-email"
-        style="
-          border: 1px solid #bcbcbc;
-          border-radius: 0.5rem;
-          width: 90%;
-          margin: 1rem auto;
-          max-width: 40rem;
-          min-width: 35rem;
-        "
-      >
-    <div
-      id="header-email"
+  <body style="font-family: 'Poppins', sans-serif">
+    <section
+      id="container-email"
       style="
-            background-color: #065AD8;
-            display: flex;
-            margin-left: -0.3rem;
-            margin-right: -0.3rem;
-            margin-top: -0.1rem;
-            justify-content: space-between;
-            border-top-right-radius: 0.5rem;
-            border-top-left-radius: 0.5rem;
-            border-bottom-right-radius: 4rem;
-            align-items: center;
-            padding: 1.2rem 2.2rem;
-            color: white;
-                       
-          "
+        border: 1px solid #bcbcbc;
+        border-radius: 0.5rem;
+        width: 90%;
+        margin: 1rem auto;
+        max-width: 40rem;
+        min-width: 35rem;
+      "
     >
-      <h2
+      <div
+        id="header-email"
         style="
-      
-              font-size: 24px;
-              margin: 0;
-              white-space: nowrap;
-              color: white;
-            "
-      >
-        Cambio de contraseña
-        
-      </h2>
-
-       <img
-        src="${url.resourcesPath}/img/score_logo_blank.png"
-        alt="Logo score"
-      /> 
-    </div>
-
-    <div
-      id="info-recover"
-      style="margin-left: 2.5rem; margin-top: 2rem; margin-right: 3rem"
-    >
-
-      <h2
-        style="
-              font-weight: 400;      
-              color: black;
-              font-size: 20px;
-              margin-bottom: 1rem;
-            "
-      >
-        Hola,
-      </h2>
-      <h2
-        id="name-user"
-        style="
-              color: #065AD8;
-      
-              margin-bottom: 1rem;
-              font-size: 24px;
-            "
-      >
-        Pepito Pérez Rodríguez
-      </h2>
-      <p
-        style="
-          font-weight: 500;
-          width: 100%;
-          font-size: 16px;
-          color: #000000;
-          margin-bottom: 2rem;
+          background-color: #065ad8;
+          display: flex;
+          margin-left: -0.3rem;
+          margin-right: -0.3rem;
+          margin-top: -0.1rem;
+          justify-content: space-between;
+          border-top-right-radius: 0.5rem;
+          border-top-left-radius: 0.5rem;
+          border-bottom-right-radius: 4rem;
+          align-items: center;
+          padding: 1.2rem 2.2rem;
+          color: white;
         "
       >
-      La contraseña de tu cuenta en SCORE se ha cambiado con éxito
-      </p>
+        <h2
+          style="font-size: 24px; margin: 0; white-space: nowrap; color: white"
+        >
+          Verificación de email
+        </h2>
 
-      <p
-        style="
-      
-              width: 100%;
-              font-size: 14px;
-              color: #828282;
-              margin-bottom: 2rem;
-            "
+        <img
+          src="${url.resourcesPath}/img/score_logo_blank.png"
+          alt="Logo score"
+        />
+      </div>
+
+      <div
+        id="info-recover"
+        style="margin-left: 2.5rem; margin-top: 2rem; margin-right: 3rem"
       >
-      Te enviamos esta notificación para garantizar la privacidad y seguridad de tu cuenta, si has autorizado este cambio, no es necesario que realices ninguna acción
-      </p>
-
-      
-      <!-- <a href="${link}">
-        <button
-          id="button-restablish"
+        <h2
           style="
-              background-color: #065AD8;
+            font-weight: 400;
+            color: black;
+            font-size: 20px;
+            margin-bottom: 1rem;
+          "
+        >
+          Hola,
+        </h2>
+        <h2
+          id="name-user"
+          style="
+            color: #065ad8;
+
+            margin-bottom: 1rem;
+            font-size: 24px;
+          "
+        >
+          c.camilo.b.rincon@hotmail.com
+        </h2>
+
+        <p
+          style="
+            width: 100%;
+            font-size: 14px;
+            color: #828282;
+            margin-bottom: 2rem;
+          "
+        >
+          Alguien ha asignado una cuenta con esta dirección de correo
+          electrónico. Si fuiste tu, has click en el siguiente enlace para
+          activar la cuenta
+        </p>
+
+        <a href="${link}">
+          <button
+            id="button-restablish"
+            style="
+              background-color: #065ad8;
               color: white;
               font-weight: 600;
               border-radius: 2rem;
-              width: 19rem;
+              width: 15rem;
               font-size: 18px;
               padding: 0.5rem;
-              margin-bottom: 2.5rem;
+              margin-bottom: 1rem;
               border: none;
               cursor: pointer;
             "
+          >
+            Confirmar Email
+          </button>
+        </a>
+        <p
+          style="
+            width: 100%;
+            font-size: 14px;
+            color: #828282;
+            margin-bottom: 2rem;
+          "
         >
-          ${msg("restartPass")}
-        </button>
-      </a> -->
-      <p
-        style="
-          text-align: center;
-          color: #606060;
-          font-size: 14px;
-          text-align: justify;
-        "
-      >
-      Si no solicitaste este cambio  porfavor, cambia tu contraseña en nuestra plataforma, si no tienes accesos a tu cuenta comunícate de manera inmediata a nuestro canal de soporte
-        <span style="
-                color: #6D6D6D;
-                font-weight: 600;
-                text-decoration: none;
-                ">
-          soporte.innerconsulting.com
-        </span>
-      </p>
-    </div>
-  </section>
-  <p
-    style="
-      text-align: center;
-      color: #B2B2B2;
-      font-size: 16px;
-    "
-  >
-  © 2024 SCORE. Todos los derechos reservados.
-  </p>
-</body>
-
-
+          Enlace válido por los próximos 5 minutos*
+        </p>
+        <p
+          style="
+            text-align: center;
+            color: #606060;
+            font-size: 14px;
+            text-align: justify;
+          "
+        >
+          Si tienes dudas o inconvenientes con la activación de tu cuenta puedes
+          acceder a nuestro panel de soporte en
+          <span style="color: #6d6d6d; font-weight: 600; text-decoration: none">
+            soporte.innerconsulting.com
+          </span>
+        </p>
+      </div>
+    </section>
+    <p style="text-align: center; color: #b2b2b2; font-size: 16px">
+      © 2024 SCORE. Todos los derechos reservados.
+    </p>
+  </body>
 </html>

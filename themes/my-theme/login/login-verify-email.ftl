@@ -9,7 +9,9 @@
         <p class="instruction">
             ${msg("emailVerifyInstruction2")}
             <br/>
-            <a href="${url.loginAction}">${msg("doClickHere")}</a> ${msg("emailVerifyInstruction3")}
+            <a href="${url.loginAction}">${msg("doClickHere")}</a> 
+            
+            ${msg("emailVerifyInstruction3")}
         </p>
     </#if>
 </@layout.registrationLayout>
